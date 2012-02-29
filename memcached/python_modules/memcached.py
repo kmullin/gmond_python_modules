@@ -170,25 +170,25 @@ def metric_init(params):
                 "name"       : mp+"_cmd_get",
                 "units"      : "commands",
                 "slope"      : "positive",
-                "description": "Cumulative number of retrieval reqs",
+                "description": "Total number of GET reqs",
                 }))
     descriptors.append(create_desc(Desc_Skel, {
                 "name"       : mp+"_cmd_set",
                 "units"      : "commands",
                 "slope"      : "positive",
-                "description": "Cumulative number of storage reqs",
+                "description": "Total number of SET reqs",
                 }))
     descriptors.append(create_desc(Desc_Skel, {
                 "name"       : mp+"_bytes_read",
                 "units"      : "bytes",
                 "slope"      : "positive",
-                "description": "Total number of bytes read by this server from network",
+                "description": "Total number of bytes read",
                 }))
     descriptors.append(create_desc(Desc_Skel, {
                 "name"       : mp+"_bytes_written",
                 "units"      : "bytes",
                 "slope"      : "positive",
-                "description": "Total number of bytes sent by this server to network",
+                "description": "Total number of bytes sent",
                 }))
     descriptors.append(create_desc(Desc_Skel, {
                 "name"       : mp+"_bytes",
@@ -218,7 +218,7 @@ def metric_init(params):
                 "name"       : mp+"_get_hits",
                 "units"      : "items",
                 "slope"      : "positive",
-                "description": "Number of keys that have been requested and found present ",
+                "description": "Number of keys that have been requested and found present",
                 }))
     descriptors.append(create_desc(Desc_Skel, {
                 "name"       : mp+"_get_misses",
@@ -273,7 +273,7 @@ def metric_init(params):
                     "name"       : mp+"_cmd_set_hits",
                     "units"      : "items",
                     "slope"      : "positive",
-                    "description": "Number of keys that have been stored and found present ",
+                    "description": "Number of keys that have been stored and found present",
                     }))
         descriptors.append(create_desc(Desc_Skel, {
                     "name"       : mp+"_cmd_set_misses",
@@ -286,13 +286,13 @@ def metric_init(params):
                     "name"       : mp+"_cmd_delete",
                     "units"      : "commands",
                     "slope"      : "positive",
-                    "description": "Cumulative number of delete reqs",
+                    "description": "Total number of delete reqs",
                     }))
         descriptors.append(create_desc(Desc_Skel, {
                     "name"       : mp+"_cmd_delete_hits",
                     "units"      : "items",
                     "slope"      : "positive",
-                    "description": "Number of keys that have been deleted and found present ",
+                    "description": "Number of keys that have been deleted and found present",
                     }))
         descriptors.append(create_desc(Desc_Skel, {
                     "name"       : mp+"_cmd_delete_misses",
